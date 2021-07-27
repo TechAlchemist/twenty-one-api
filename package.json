@@ -1,0 +1,26 @@
+{
+  "name": "twenty-one-backend",
+  "version": "1.0.0",
+  "description": "A Hackathon project in which we create an in browser 21 card game.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hackathon",
+    "rest",
+    "api"
+  ],
+  "author": "Brandon Myers",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.12"
+  }
+}
