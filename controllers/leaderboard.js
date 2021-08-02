@@ -2,7 +2,6 @@ const User = require('../models/User');
 
 async function updateScore(req, res) {
     let gameWon = req.query.gameWon;
-    console.log('gameWon: ' + typeof gameWon)
     if (gameWon !== 'won' && gameWon !== 'loss') return res.status(500).json({"message": "Could not record game due to malformed query string."});
     User.findById(req.params.id, (error, user) => {
         if (error) res.status(500).json({"message": "Failed to record game."});
