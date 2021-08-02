@@ -42,6 +42,12 @@ async function login(req, res) {
   }
 }
 
+async function getUser(req, res) {
+  const user = await User.findById(req.params.id);
+  if (user) return res.status(200).json(user);
+  else return res.status(500).json({"message": "Failed to retrieve user information."})
+}
+
 function createJWT(user) {
   return jwt.sign(
     { user }, // data payload
@@ -52,5 +58,6 @@ function createJWT(user) {
 
 module.exports = {
   register,
-  login
+  login,
+  getUser
 };
