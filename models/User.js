@@ -12,22 +12,19 @@ const userSchema = new Schema({
         unique: true
     },
     password: String,
-    singlePlayerWins: {
+    wins: {
         type: Number,
         default: 0
     },
-    singlePlayerLosses: {
+    losses: {
         type: Number,
         default: 0
     },
-    multiplayerWins: {
-        type: Number,
-        default: 0
-    },
-    multiplayerLosses: {
-        type: Number,
-        default: 0
+    gamesPlayed: {
+      type: Number,
+      default: 0
     }
+
 }, 
 {
     timestamps: true
